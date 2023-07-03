@@ -1,0 +1,230 @@
+/* Common styles */
+
+body {
+  margin: 55px;
+  /* font-family: "Poiret One", Arial, sans-serif;  */
+  
+  background-color: #FF6666;
+}
+
+/* Rest of the code remains the same */
+.align-items-md-center {
+  align-items: center;
+}
+
+.g-5 {
+  gap: 1.25rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.fw-bold {
+  font-family: 'Teko', sans-serif;
+}
+
+.text-body-emphasis {
+  color: #f5f5f5;
+  margin-top: 10px;
+}
+
+.text-body-secondary {
+  color: #000;
+  margin-top: 10px;
+}
+
+.text-body-para {
+  color: #2960ec;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.feature-icon-small {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ed0d0d;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-bg-primary {
+  background-color: #007bff;
+}
+
+.bg-gradient {
+  background: linear-gradient(#007bff, #0056b3);
+}
+
+.fs-4 {
+  font-size: 1.5rem;
+}
+
+.rounded-3 {
+  border-radius: 0.3rem;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.fade-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeBottom 1s ease-out forwards;
+}
+
+@keyframes fadeBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  background-color: #8294C4;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #146C94;
+}
+
+.card-title {
+  
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.card{
+  fill: #000; /* Initial color */
+  transition: fill 0.3s ease;
+}
+
+.card:hover .card{
+  fill: white; /* Hover color */
+
+}
+
+
+
+.card-svg {
+  fill: #000; /* Initial color */
+  transition: fill 0.3s ease;
+}
+
+.card:hover .card-svg {
+  fill: white; /* Hover color */
+}
+
+.card-video{
+border-radius: 10px;
+}
+.video-container {
+  display: flex;
+}
+
+.video-title {
+  margin-left: 10px;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+}
+
+
+/* Add a CSS transition property for smooth zoom effect */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Apply the zoom effect when hovering over the card */
+.card:hover {
+  transform: scale(1.05); /* Increase the scale value to zoom in more */
+}
+
+/* Media Query for Tablet View */
+
+
+/* Add flip animation */
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotateX(0deg);
+  }
+  to {
+    transform: perspective(400px) rotateX(360deg);
+  }
+}
+
+/* Add the flip animation class to the paragraphs */
+.card-body p {
+  animation: flip 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .card {
+    width: 160px;
+    height: 230px;
+    margin: 10px 90px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .video-title {
+    font-size: 18px;
+  }
+}
